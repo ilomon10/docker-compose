@@ -1,0 +1,7 @@
+ARG NODE_VERSION=20
+
+FROM node:${NODE_VERSION}-slim AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
+WORKDIR /app
