@@ -1,0 +1,2067 @@
+[
+    {
+        "id": "faad42cc6fc6b0b1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "15b93a2e7e9bc468",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4eb19755713fcfbb",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "efd6aa78549913eb",
+        "type": "subflow",
+        "name": "Ping",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "3bd9cde1f8d14411"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 990,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "7bd712de6e2c3d46",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 990,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "6d080fc3cda7a021",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 990,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "6d080fc3cda7a021",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 990,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "6d080fc3cda7a021",
+                        "port": 2
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "counter",
+                "type": "num",
+                "value": "5"
+            },
+            {
+                "name": "timeout",
+                "type": "num",
+                "value": "10"
+            }
+        ],
+        "meta": {},
+        "color": "#3FADB5",
+        "outputLabels": [
+            "result",
+            "stdout",
+            "stderr",
+            "code"
+        ],
+        "icon": "node-red/bridge.svg",
+        "status": {
+            "x": 500,
+            "y": 480,
+            "wires": [
+                {
+                    "id": "19e8fc956cb51f1c",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "a83931916cd00b3c",
+        "type": "group",
+        "z": "faad42cc6fc6b0b1",
+        "name": "Save Current Device",
+        "style": {
+            "label": true,
+            "label-position": "n"
+        },
+        "nodes": [
+            "51dd310d28cd7dd6",
+            "fdaded522b2fba23",
+            "996c90ea6287d742",
+            "68c614379a993741",
+            "e433b053373cf08b",
+            "4fb785462d7cb7c6",
+            "b7776ad5c6ae01f4",
+            "e63024bb30cb5c63",
+            "45b84636c10ecba9"
+        ],
+        "x": 834,
+        "y": 539,
+        "w": 1032,
+        "h": 182
+    },
+    {
+        "id": "4e13df872075159d",
+        "type": "group",
+        "z": "faad42cc6fc6b0b1",
+        "name": "Logger",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3e00ad732a96e376",
+            "177de42851cabcea",
+            "a14381b3d8468993",
+            "dd679747e8e3327f",
+            "08347a2594bd21b2",
+            "74da0c17e2d4ad53",
+            "52174c09992c5795",
+            "84dc56c673147747",
+            "ee87cf446c5409a6",
+            "d50c0234c82d8125",
+            "71511e1568090d2d",
+            "390d63e666377bb5"
+        ],
+        "x": 34,
+        "y": 499,
+        "w": 672,
+        "h": 322
+    },
+    {
+        "id": "26184e5082c3aa72",
+        "type": "group",
+        "z": "faad42cc6fc6b0b1",
+        "name": "Device ping scanner",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "25e0b11be92244e0",
+            "bd7cec7333f10830",
+            "8f59e8d9de8b6fe8",
+            "13751ebd7b88d80d",
+            "de8537eba6a7c89a",
+            "2e1cb18ab3160cc1",
+            "2d2b8d08cb69958b",
+            "9fea28ba1c604c3c",
+            "df95025699ec5295",
+            "3970a2e6b8a5986b",
+            "1069d588e09d4a68",
+            "344d80f536dcd575",
+            "1615cd1efee3995b",
+            "83f1059b39cae8fc",
+            "ff6667a6ed37bc23",
+            "b6e44fde862dc4c5",
+            "abe872f0bf97ba3e",
+            "71bb18e179c64cd8",
+            "4203e1eaaa318f25",
+            "d24e1adbbf5485ae"
+        ],
+        "x": 74,
+        "y": 839,
+        "w": 1612,
+        "h": 522
+    },
+    {
+        "id": "fed19db9286c51f8",
+        "type": "group",
+        "z": "faad42cc6fc6b0b1",
+        "name": "Handle Tracker Data",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c4ff55a18c9d3029",
+            "0e2a0fcbfcd9fe43",
+            "973b159a1941bb33",
+            "0fde4ad6c33c2272",
+            "7e45f2944f2cf244",
+            "30b5420fb48262d9",
+            "31b0e94691717b1b",
+            "6e6d43858b477869",
+            "ea0e67b6db692b50",
+            "4540a2304b232d99",
+            "960964cd06deafa1",
+            "0946ca9ad54a25b4",
+            "707fbe8d88fbd9c1",
+            "66467382a7c50948",
+            "8ccf7c889560568c",
+            "e32d498a987e58e0",
+            "65a05b24105db79a",
+            "0619ba9b2b7dae89",
+            "88948e7b41bd9935",
+            "41156c0071635755",
+            "14bffdc74e05c214"
+        ],
+        "x": 54,
+        "y": 119,
+        "w": 1472,
+        "h": 362
+    },
+    {
+        "id": "65a05b24105db79a",
+        "type": "junction",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "707fbe8d88fbd9c1"
+            ]
+        ]
+    },
+    {
+        "id": "0619ba9b2b7dae89",
+        "type": "junction",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "0fde4ad6c33c2272"
+            ]
+        ]
+    },
+    {
+        "id": "8f59e8d9de8b6fe8",
+        "type": "junction",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "x": 960,
+        "y": 960,
+        "wires": [
+            [
+                "3970a2e6b8a5986b",
+                "1069d588e09d4a68"
+            ]
+        ]
+    },
+    {
+        "id": "1615cd1efee3995b",
+        "type": "junction",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "x": 1180,
+        "y": 960,
+        "wires": [
+            [
+                "ff6667a6ed37bc23"
+            ]
+        ]
+    },
+    {
+        "id": "13751ebd7b88d80d",
+        "type": "junction",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "x": 960,
+        "y": 1320,
+        "wires": [
+            [
+                "1069d588e09d4a68"
+            ]
+        ]
+    },
+    {
+        "id": "869d37d4e70a41de",
+        "type": "influxdb",
+        "hostname": "influxdb2",
+        "port": 8086,
+        "protocol": "http",
+        "database": "fms-tracker",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb2:8086",
+        "timeout": "30",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "5667c2c4b41a58cd",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "10.10.40.9",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "tracker",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "Password221b#$;",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "12cfc8f0d644282a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "934dfadd12bb8c96",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "10.10.40.17",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "fms",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "Password221b#$;",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "6d080fc3cda7a021",
+        "type": "exec",
+        "z": "efd6aa78549913eb",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "7bd712de6e2c3d46"
+            ],
+            [
+                "076fe0cf783d83db"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3bd9cde1f8d14411",
+        "type": "template",
+        "z": "efd6aa78549913eb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "ping -c {{env.counter}} -t {{env.timeout}} {{payload}}",
+        "output": "str",
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "6d080fc3cda7a021"
+            ]
+        ]
+    },
+    {
+        "id": "7bd712de6e2c3d46",
+        "type": "function",
+        "z": "efd6aa78549913eb",
+        "name": "function 1",
+        "func": "msg.payload = parsePingOutput(msg.payload);\n\nreturn msg;\n\n\nfunction parsePingOutput(pingOutput) {\n    const result = {};\n\n    // Parse the host and IP address\n    const hostMatch = pingOutput.match(/PING (.+) \\(([\\d.]+)\\)/);\n    if (hostMatch) {\n        result.host = hostMatch[1];\n        result.ip = hostMatch[2];\n    }\n\n    // Parse responses\n    const responseRegex = /(\\d+) bytes from ([\\d.]+): icmp_seq=(\\d+) ttl=(\\d+) time=([\\d.]+) ms/g;\n    result.responses = [];\n    let responseMatch;\n    while ((responseMatch = responseRegex.exec(pingOutput)) !== null) {\n        result.responses.push({\n            bytes: parseInt(responseMatch[1], 10),\n            ip: responseMatch[2],\n            icmp_seq: parseInt(responseMatch[3], 10),\n            ttl: parseInt(responseMatch[4], 10),\n            time_ms: parseFloat(responseMatch[5])\n        });\n    }\n\n    // Parse packet statistics\n    const statsMatch = pingOutput.match(/(\\d+) packets transmitted, (\\d+) received, (\\d+)% packet loss/);\n    if (statsMatch) {\n        result.statistics = {\n            packets_transmitted: parseInt(statsMatch[1], 10),\n            packets_received: parseInt(statsMatch[2], 10),\n            packet_loss: parseInt(statsMatch[3], 10)\n        };\n    }\n\n    // Parse RTT statistics\n    const rttMatch = pingOutput.match(/rtt min\\/avg\\/max\\/mdev = ([\\d.]+)\\/([\\d.]+)\\/([\\d.]+)\\/([\\d.]+) ms/);\n    if (rttMatch) {\n        result.rtt = {\n            min: parseFloat(rttMatch[1]),\n            avg: parseFloat(rttMatch[2]),\n            max: parseFloat(rttMatch[3]),\n            mdev: parseFloat(rttMatch[4])\n        };\n    }\n\n    return result;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "076fe0cf783d83db",
+        "type": "function",
+        "z": "efd6aa78549913eb",
+        "name": "function 2",
+        "func": "msg.payload = parsePingOutput(msg.payload);\n\nreturn msg;\n\nfunction parsePingOutput(pingOutput) {\n    const result = {};\n\n    // Parse the host and IP address\n    const hostMatch = pingOutput.match(/PING (.+) \\(([\\d.]+)\\)/);\n    if (hostMatch) {\n        result.host = hostMatch[1];\n        result.ip = hostMatch[2];\n    }\n\n    // Parse packet statistics\n    const statsMatch = pingOutput.match(/(\\d+) packets transmitted, (\\d+) received, (\\d+)% packet loss/);\n    if (statsMatch) {\n        result.statistics = {\n            packets_transmitted: parseInt(statsMatch[1], 10),\n            packets_received: parseInt(statsMatch[2], 10),\n            packet_loss: parseInt(statsMatch[3], 10)\n        };\n    }\n\n    // Add a condition to handle cases with no responses\n    if (result.statistics && result.statistics.packets_received === 0) {\n        result.error = \"No response received. Possible network issue or host unreachable.\";\n    }\n\n    return result;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19e8fc956cb51f1c",
+        "type": "status",
+        "z": "efd6aa78549913eb",
+        "name": "",
+        "scope": null,
+        "x": 340,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4ff55a18c9d3029",
+        "type": "http in",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "url": "/fms-tracker",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "65a05b24105db79a",
+                "0619ba9b2b7dae89"
+            ]
+        ]
+    },
+    {
+        "id": "0e2a0fcbfcd9fe43",
+        "type": "http in",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "url": "/delayed-tracker",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "6e6d43858b477869",
+                "0619ba9b2b7dae89"
+            ]
+        ]
+    },
+    {
+        "id": "973b159a1941bb33",
+        "type": "http response",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "0fde4ad6c33c2272",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "http response",
+        "func": "msg.payload = {\n    message: \"OK\",\n    status: 200\n};\n\nmsg.statusCode = 201;\n\nconst counter_value = context.get(\"counter\") + 1 || 0;\ncontext.set(\"counter\", counter_value);\nnode.status({\n    fill: \"blue\",\n    shape: \"ring\",\n    text: `counter: ${counter_value}`\n})\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 400,
+        "wires": [
+            [
+                "973b159a1941bb33"
+            ]
+        ]
+    },
+    {
+        "id": "7e45f2944f2cf244",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "debug: telemetry data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "30b5420fb48262d9",
+        "type": "influxdb out",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "influxdb": "869d37d4e70a41de",
+        "name": "",
+        "measurement": "gpsd",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "d86acb81503d3b7b",
+        "bucket": "fms-tracker",
+        "x": 1230,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "31b0e94691717b1b",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "parser",
+        "func": "const data = [\n    {\n        ..._.pick(msg.payload, [\n            \"lon\", \"lat\",\n            \"alt\", \"temp\", \"ip\", \"is_fix\"\n        ]),\n        track: _.get(msg.payload, \"track\"),\n        mag_track: _.get(msg.payload, \"magtrack\"),\n        mag_var: _.get(msg.payload, \"magvar\"),\n        speed: toDouble(_.get(msg.payload, \"speed\") * 3.6),\n        time: moment(_.get(msg.payload, \"time\")).toDate(),\n        // timestamp: _.get(msg.payload, \"time\"),\n        realtime_status: _.get(msg, \"delayed\") ? 1 : 0\n    },\n    {\n        device_host: _.get(msg.payload, \"hostname\"),\n        device_ip: _.get(msg.payload, \"ip\"),\n        device_mac: _.get(msg.payload, \"mac\"),\n        equipment_id: _.get(msg.payload, \"equipment_id\"),\n        equipment_name: _.get(msg.payload, \"equipment_hull_number\"),\n        equipment_category: _.get(msg.payload, \"equipment_category\"),\n        realtime_status: _.get(msg, \"delayed\") ? \"delayed\" : \"realtime\"\n    }\n];\n\nmsg.raw = { ...msg.payload };\nmsg.payload = data;\nmsg.topic = `${data[1].device_host}: ${data[1].realtime_status}`;\nmsg.indb = data;\n\n\nmsg.pgdb = {\n    time: msg.raw.timestamp,\n    coordinates: `${data[0].lon} ${data[0].lat}`,\n    temperature: toDouble(data[0].temp),\n    speed: toDouble(data[0].speed),\n    ip_address: data[1].device_ip,\n    mac_address: data[1].device_mac,\n    ping: null,\n    track: toDouble(data[0].track),\n    hostname: data[1].device_host,\n    hull_number: data[1].equipment_name,\n    uuid: data[1].equipment_id,\n    is_realtime: data[0].realtime_status,\n    is_fix: data[0].is_fix === undefined ? false : data[0].is_fix,\n    equipment_type: data[1].equipment_category\n}\n\n\nreturn msg;\n\nfunction toDouble(value) {\n    const num = Number(value);\n    return isNaN(num) ? 0.0 : num;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "_",
+                "module": "lodash"
+            },
+            {
+                "var": "moment",
+                "module": "moment"
+            }
+        ],
+        "x": 910,
+        "y": 260,
+        "wires": [
+            [
+                "30b5420fb48262d9",
+                "7e45f2944f2cf244",
+                "960964cd06deafa1",
+                "88948e7b41bd9935",
+                "14bffdc74e05c214"
+            ]
+        ]
+    },
+    {
+        "id": "6e6d43858b477869",
+        "type": "split",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload.data",
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "ea0e67b6db692b50"
+            ]
+        ]
+    },
+    {
+        "id": "ea0e67b6db692b50",
+        "type": "change",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delayed",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "65a05b24105db79a"
+            ]
+        ]
+    },
+    {
+        "id": "51dd310d28cd7dd6",
+        "type": "file",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "",
+        "filename": "/data/devices.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1450,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fdaded522b2fba23",
+        "type": "file in",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "",
+        "filename": "/data/devices.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 1450,
+        "y": 580,
+        "wires": [
+            [
+                "996c90ea6287d742",
+                "68c614379a993741"
+            ]
+        ]
+    },
+    {
+        "id": "996c90ea6287d742",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "function 3",
+        "func": "const raw = msg.raw;\nlet devices = {}; \n\ntry {\n  devices = JSON.parse(msg.payload);\n} catch(err) { }\n\nconst data = raw[1];\nconst id = _.get(data, \"device_host\");\n\nmsg.payload = {\n    ...devices,\n    [id]: {\n        ..._.omit(data, [\"device_id\"]),\n        last_ip: _.get(data, \"device_ip\")\n    }\n};\n\n// msg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "_",
+                "module": "lodash"
+            }
+        ],
+        "x": 1420,
+        "y": 640,
+        "wires": [
+            [
+                "68c614379a993741",
+                "51dd310d28cd7dd6"
+            ]
+        ]
+    },
+    {
+        "id": "68c614379a993741",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "debug: save current device",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "e433b053373cf08b",
+        "type": "change",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "raw",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 580,
+        "wires": [
+            [
+                "fdaded522b2fba23"
+            ]
+        ]
+    },
+    {
+        "id": "d24e1adbbf5485ae",
+        "type": "inject",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "interval 30s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 880,
+        "wires": [
+            [
+                "4203e1eaaa318f25"
+            ]
+        ]
+    },
+    {
+        "id": "4203e1eaaa318f25",
+        "type": "file in",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "filename": "/data/devices.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 410,
+        "y": 880,
+        "wires": [
+            [
+                "b6e44fde862dc4c5"
+            ]
+        ]
+    },
+    {
+        "id": "b6e44fde862dc4c5",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "parse",
+        "func": "const raw = msg.raw;\nlet devices = JSON.parse(msg.payload);\n\nmsg.devices = devices;\nmsg.payload = Object.entries(devices).map(([key, value])=> {\n    return value;\n});\n\n// msg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "_",
+                "module": "lodash"
+            }
+        ],
+        "x": 590,
+        "y": 880,
+        "wires": [
+            [
+                "83f1059b39cae8fc"
+            ]
+        ]
+    },
+    {
+        "id": "abe872f0bf97ba3e",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "bd7cec7333f10830",
+        "type": "Load Balance",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "defaultcapacity": 100,
+        "dynamic": "c4ff55a18c9d3029",
+        "hashType": "pearson",
+        "mps": "",
+        "name": "",
+        "noavailability": "discard",
+        "nocapacity": "admin",
+        "outputs": 6,
+        "routes": "5",
+        "selection": "next",
+        "sourceProperty": "msg.topic",
+        "sticky": "",
+        "x": 600,
+        "y": 1000,
+        "wires": [
+            [],
+            [
+                "2e1cb18ab3160cc1"
+            ],
+            [
+                "25e0b11be92244e0"
+            ],
+            [
+                "2d2b8d08cb69958b"
+            ],
+            [
+                "9fea28ba1c604c3c"
+            ],
+            [
+                "df95025699ec5295"
+            ]
+        ]
+    },
+    {
+        "id": "2e1cb18ab3160cc1",
+        "type": "subflow:efd6aa78549913eb",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "x": 830,
+        "y": 980,
+        "wires": [
+            [
+                "8f59e8d9de8b6fe8"
+            ],
+            [],
+            [
+                "13751ebd7b88d80d"
+            ],
+            [
+                "13751ebd7b88d80d"
+            ]
+        ]
+    },
+    {
+        "id": "25e0b11be92244e0",
+        "type": "subflow:efd6aa78549913eb",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "x": 830,
+        "y": 1060,
+        "wires": [
+            [
+                "8f59e8d9de8b6fe8"
+            ],
+            [],
+            [
+                "13751ebd7b88d80d"
+            ],
+            [
+                "13751ebd7b88d80d"
+            ]
+        ]
+    },
+    {
+        "id": "2d2b8d08cb69958b",
+        "type": "subflow:efd6aa78549913eb",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "x": 830,
+        "y": 1140,
+        "wires": [
+            [
+                "8f59e8d9de8b6fe8"
+            ],
+            [],
+            [
+                "13751ebd7b88d80d"
+            ],
+            [
+                "13751ebd7b88d80d"
+            ]
+        ]
+    },
+    {
+        "id": "9fea28ba1c604c3c",
+        "type": "subflow:efd6aa78549913eb",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "x": 830,
+        "y": 1220,
+        "wires": [
+            [
+                "8f59e8d9de8b6fe8"
+            ],
+            [],
+            [
+                "13751ebd7b88d80d"
+            ],
+            [
+                "13751ebd7b88d80d"
+            ]
+        ]
+    },
+    {
+        "id": "df95025699ec5295",
+        "type": "subflow:efd6aa78549913eb",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "x": 830,
+        "y": 1300,
+        "wires": [
+            [
+                "8f59e8d9de8b6fe8"
+            ],
+            [],
+            [
+                "13751ebd7b88d80d"
+            ],
+            [
+                "13751ebd7b88d80d"
+            ]
+        ]
+    },
+    {
+        "id": "de8537eba6a7c89a",
+        "type": "delay",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 1000,
+        "wires": [
+            [
+                "bd7cec7333f10830"
+            ]
+        ]
+    },
+    {
+        "id": "71bb18e179c64cd8",
+        "type": "influxdb out",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "influxdb": "869d37d4e70a41de",
+        "name": "",
+        "measurement": "net-ping",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "d86acb81503d3b7b",
+        "bucket": "fms-tracker",
+        "x": 1520,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "ff6667a6ed37bc23",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "parse",
+        "func": "const raw = msg.raw;\nconst data = msg.payload;\n// msg.payload = Object.entries(devices).map(([key, value])=> {\n//     return value.last_ip;\n// });\n\nmsg.payload = [\n    {\n        ip: raw.last_ip,\n        ping: data.rtt.avg\n    },\n    {\n        ..._.omit(raw, [\"realtime_status\", \"last_ip\"]),\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "_",
+                "module": "lodash"
+            }
+        ],
+        "x": 1270,
+        "y": 1140,
+        "wires": [
+            [
+                "abe872f0bf97ba3e",
+                "71bb18e179c64cd8"
+            ]
+        ]
+    },
+    {
+        "id": "83f1059b39cae8fc",
+        "type": "split",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 170,
+        "y": 960,
+        "wires": [
+            [
+                "344d80f536dcd575"
+            ]
+        ]
+    },
+    {
+        "id": "344d80f536dcd575",
+        "type": "change",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "raw",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.last_ip",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "raw.device_host",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 1000,
+        "wires": [
+            [
+                "de8537eba6a7c89a"
+            ]
+        ]
+    },
+    {
+        "id": "4fb785462d7cb7c6",
+        "type": "change",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "req.url",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload[1].device_host",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 580,
+        "wires": [
+            [
+                "b7776ad5c6ae01f4"
+            ]
+        ]
+    },
+    {
+        "id": "b7776ad5c6ae01f4",
+        "type": "switch",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "",
+        "property": "path",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/fms-tracker",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 620,
+        "wires": [
+            [
+                "e63024bb30cb5c63"
+            ]
+        ]
+    },
+    {
+        "id": "e63024bb30cb5c63",
+        "type": "delay",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "",
+        "pauseType": "queue",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1030,
+        "y": 660,
+        "wires": [
+            [
+                "e433b053373cf08b"
+            ]
+        ]
+    },
+    {
+        "id": "3970a2e6b8a5986b",
+        "type": "switch",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "rtt",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 960,
+        "wires": [
+            [
+                "1615cd1efee3995b"
+            ]
+        ]
+    },
+    {
+        "id": "1069d588e09d4a68",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "26184e5082c3aa72",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "4540a2304b232d99",
+        "type": "delay",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1000",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "31b0e94691717b1b"
+            ]
+        ]
+    },
+    {
+        "id": "3e00ad732a96e376",
+        "type": "catch",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "",
+        "scope": [
+            "30b5420fb48262d9",
+            "71bb18e179c64cd8",
+            "960964cd06deafa1"
+        ],
+        "uncaught": false,
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "a14381b3d8468993"
+            ]
+        ]
+    },
+    {
+        "id": "177de42851cabcea",
+        "type": "file",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "Log File",
+        "filename": "targetPath",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 540,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a14381b3d8468993",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "Define Target Log File",
+        "func": "msg.targetPath = `/data/logger/${moment().format(\"YYYY_MM_DD\")}-log.txt`\n\nconst counter_value = context.get(\"counter\") + 1 || 0;\ncontext.set(\"counter\", counter_value);\nnode.status({\n    fill: \"blue\",\n    shape: \"ring\",\n    text: `counter: ${counter_value}`\n})\n\nmsg.logdb = {\n    message: escapeSqlString(msg.error.message),\n    type: \"error\",\n    node_id: msg.error.source.id,\n    node_type: msg.error.source.type,\n    metadata: JSON.stringify({\n        hostname: msg.raw.hostname,\n        ip: msg.raw.ip,\n        mac: msg.raw.mac,\n        payload: msg.raw\n    })\n}\n\nreturn msg;\n\nfunction escapeSqlString(value) {\n    if (typeof value !== 'string') {\n        return value;\n    }\n    return value.replace(/'/g, \"''\");\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "moment",
+                "module": "moment"
+            }
+        ],
+        "x": 340,
+        "y": 580,
+        "wires": [
+            [
+                "177de42851cabcea",
+                "08347a2594bd21b2",
+                "dd679747e8e3327f"
+            ]
+        ]
+    },
+    {
+        "id": "08347a2594bd21b2",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "960964cd06deafa1",
+        "type": "postgresql",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "query": "-- Insert a new row into the sensor_data table\nINSERT INTO tracker_data (\n    \"time\",\n    coordinates,\n    temperature,\n    speed,\n    ip_address,\n    mac_address,\n    track,\n    hostname,\n    hull_number,\n    uuid,\n    is_realtime,\n    is_fix,\n    equipment_type\n) VALUES (\n    '{{{msg.pgdb.time}}}',\n    ST_GeomFromText('POINT({{{msg.pgdb.coordinates}}})', 4326),\n    '{{{msg.pgdb.temperature}}}',\n    '{{{msg.pgdb.speed}}}',\n    '{{{msg.pgdb.ip_address}}}',\n    '{{{msg.pgdb.mac_address}}}',\n    '{{{msg.pgdb.track}}}',\n    '{{{msg.pgdb.hostname}}}',\n    '{{{msg.pgdb.hull_number}}}',\n    '{{{msg.pgdb.uuid}}}',\n    '{{{msg.pgdb.is_realtime}}}',\n    '{{{msg.pgdb.is_fix}}}',\n    '{{{msg.pgdb.equipment_type}}}'\n);",
+        "postgreSQLConfig": "5667c2c4b41a58cd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1170,
+        "y": 260,
+        "wires": [
+            [
+                "0946ca9ad54a25b4"
+            ]
+        ]
+    },
+    {
+        "id": "0946ca9ad54a25b4",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "707fbe8d88fbd9c1",
+        "type": "switch",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "property": "delayed",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "4540a2304b232d99"
+            ],
+            [
+                "66467382a7c50948"
+            ]
+        ],
+        "outputLabels": [
+            "delayed",
+            "realtime"
+        ]
+    },
+    {
+        "id": "66467382a7c50948",
+        "type": "delay",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "31b0e94691717b1b"
+            ]
+        ]
+    },
+    {
+        "id": "8ccf7c889560568c",
+        "type": "comment",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "Realtime Data",
+        "info": "Delayed Data",
+        "x": 690,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e32d498a987e58e0",
+        "type": "comment",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "Delayed Data",
+        "info": "Delayed Data",
+        "x": 690,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "88948e7b41bd9935",
+        "type": "link out",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "45b84636c10ecba9"
+        ],
+        "x": 945,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "45b84636c10ecba9",
+        "type": "link in",
+        "z": "faad42cc6fc6b0b1",
+        "g": "a83931916cd00b3c",
+        "name": "link in 1",
+        "links": [
+            "88948e7b41bd9935"
+        ],
+        "x": 875,
+        "y": 580,
+        "wires": [
+            [
+                "4fb785462d7cb7c6"
+            ]
+        ]
+    },
+    {
+        "id": "dd679747e8e3327f",
+        "type": "postgresql",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "logs",
+        "query": "-- Insert a new row into the sensor_data table\nINSERT INTO logs (\n    \"type\",\n    \"message\",\n    \"node_id\",\n    \"node_type\",\n    \"metadata\"\n) VALUES (\n    '{{{msg.logdb.type}}}',\n    '{{{msg.logdb.message}}}',\n    '{{{msg.logdb.node_id}}}',\n    '{{{msg.logdb.node_type}}}',\n    '{{{msg.logdb.metadata}}}'\n);",
+        "postgreSQLConfig": "5667c2c4b41a58cd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 530,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74da0c17e2d4ad53",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "52174c09992c5795",
+        "type": "catch",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "",
+        "scope": "group",
+        "uncaught": false,
+        "x": 150,
+        "y": 680,
+        "wires": [
+            [
+                "84dc56c673147747"
+            ]
+        ]
+    },
+    {
+        "id": "84dc56c673147747",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "Define Target Log File",
+        "func": "msg.targetPath = `/data/logger/${moment().format(\"YYYY_MM_DD\")}-log.txt`\n\nconst counter_value = context.get(\"counter\") + 1 || 0;\ncontext.set(\"counter\", counter_value);\nnode.status({\n    fill: \"blue\",\n    shape: \"ring\",\n    text: `counter: ${counter_value}`\n})\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "moment",
+                "module": "moment"
+            }
+        ],
+        "x": 340,
+        "y": 680,
+        "wires": [
+            [
+                "74da0c17e2d4ad53",
+                "177de42851cabcea"
+            ]
+        ]
+    },
+    {
+        "id": "ee87cf446c5409a6",
+        "type": "file in",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "",
+        "filename": "targetPath",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 480,
+        "y": 780,
+        "wires": [
+            [
+                "390d63e666377bb5"
+            ]
+        ]
+    },
+    {
+        "id": "d50c0234c82d8125",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "Define Target Log File",
+        "func": "msg.targetPath = `/data/logger/${moment().format(\"YYYY_MM_DD\")}-log.txt`\n\nconst counter_value = context.get(\"counter\") + 1 || 0;\ncontext.set(\"counter\", counter_value);\nnode.status({\n    fill: \"blue\",\n    shape: \"ring\",\n    text: `counter: ${counter_value}`\n})\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "moment",
+                "module": "moment"
+            }
+        ],
+        "x": 280,
+        "y": 780,
+        "wires": [
+            [
+                "ee87cf446c5409a6"
+            ]
+        ]
+    },
+    {
+        "id": "71511e1568090d2d",
+        "type": "inject",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 740,
+        "wires": [
+            [
+                "d50c0234c82d8125"
+            ]
+        ]
+    },
+    {
+        "id": "390d63e666377bb5",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "g": "4e13df872075159d",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "41156c0071635755",
+        "type": "mqtt out",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "api/grafana/telemetry/by/hostname/:device_hostname",
+        "topic": "",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12cfc8f0d644282a",
+        "x": 1300,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "14bffdc74e05c214",
+        "type": "function",
+        "z": "faad42cc6fc6b0b1",
+        "g": "fed19db9286c51f8",
+        "name": "Construct Payload",
+        "func": "msg.topic= `api/grafana/telemetry/by/hostname/${msg.pgdb.hostname}`\nmsg.payload = {\n  ...msg.pgdb,\n  lat: msg.raw.lat,\n  lon: msg.raw.lon\n};\n\nreturn msg;\n\nfunction slugify(text) {\n  return text\n    .toLowerCase()\n    .normalize('NFD')                     // Decompose accented letters\n    .replace(/[\\u0300-\\u036f]/g, '')     // Remove diacritics\n    .replace(/[^a-z0-9]+/g, '-')         // Replace non-alphanumerics with hyphen\n    .replace(/^-+|-+$/g, '')             // Trim leading/trailing hyphens\n    .replace(/-{2,}/g, '-');             // Replace multiple hyphens with one\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 400,
+        "wires": [
+            [
+                "41156c0071635755",
+                "57d8430d269dcc87"
+            ]
+        ]
+    },
+    {
+        "id": "57d8430d269dcc87",
+        "type": "debug",
+        "z": "faad42cc6fc6b0b1",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "704e8bc5a17d22ad",
+        "type": "debug",
+        "z": "15b93a2e7e9bc468",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b9e168a278f46baa",
+        "type": "mqtt out",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "topic": "api/grafana/testing",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12cfc8f0d644282a",
+        "x": 710,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "efc66be9f72f2b3e",
+        "type": "inject",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 460,
+        "y": 480,
+        "wires": [
+            [
+                "b9e168a278f46baa"
+            ]
+        ]
+    },
+    {
+        "id": "33b9b5fa29fcbedb",
+        "type": "mqtt out",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12cfc8f0d644282a",
+        "x": 1310,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e77f5d827b25d0bd",
+        "type": "function",
+        "z": "15b93a2e7e9bc468",
+        "name": "function 5",
+        "func": "// let hostname = customSlugify(msg.raw.hostname);\n\nmsg.topic = `api/grafana/status/by/hostname/${msg.raw.hostname}`;\n\nreturn msg;\n\nfunction customSlugify(input) {\n    // Split into parts\n    const parts = input.trim().split(/\\s+/);\n    const result = [];\n\n    for (let i = 0; i < parts.length; i++) {\n        const current = parts[i];\n\n        // If current and next are both numbers, combine them\n        if (!isNaN(Number(current)) && i + 1 < parts.length && !isNaN(Number(parts[i + 1]))) {\n            result.push(current + parts[i + 1]);\n            i++; // Skip next part\n        } else {\n            result.push(current);\n        }\n    }\n\n    return result.join('-');\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 240,
+        "wires": [
+            [
+                "33b9b5fa29fcbedb",
+                "704e8bc5a17d22ad"
+            ]
+        ]
+    },
+    {
+        "id": "4f48e48669e8a330",
+        "type": "postgresql",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "query": "select\n  el.start,\n  el.end,\n  event_id,\n  event_description\nfrom\n  event_logs as el\n  left join mine_equipments me on me.id = el.event_id\nwhere\n  el.equipment_id = {{{msg.payload.uuid}}}\norder by\n  el.start desc\nlimit\n  1;",
+        "postgreSQLConfig": "934dfadd12bb8c96",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 970,
+        "y": 100,
+        "wires": [
+            [
+                "016686437dd5ccd5"
+            ]
+        ]
+    },
+    {
+        "id": "060b5e0956efbf49",
+        "type": "delay",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "pauseType": "timed",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 240,
+        "wires": [
+            [
+                "84619c4a4c8c428a"
+            ],
+            [
+                "ba5fe8c975292e2b"
+            ]
+        ]
+    },
+    {
+        "id": "ba5fe8c975292e2b",
+        "type": "debug",
+        "z": "15b93a2e7e9bc468",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5e0694189853c1c6",
+        "type": "catch",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "scope": [
+            "4f48e48669e8a330"
+        ],
+        "uncaught": false,
+        "x": 990,
+        "y": 380,
+        "wires": [
+            [
+                "2f7023b3f4a1e1c9"
+            ]
+        ]
+    },
+    {
+        "id": "2f7023b3f4a1e1c9",
+        "type": "debug",
+        "z": "15b93a2e7e9bc468",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b4ecf310beaeb3ad",
+        "type": "mqtt in",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "topic": "api/grafana/telemetry/by/hostname/DT-SMA-4001",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "12cfc8f0d644282a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "060b5e0956efbf49"
+            ]
+        ]
+    },
+    {
+        "id": "016686437dd5ccd5",
+        "type": "split",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 990,
+        "y": 160,
+        "wires": [
+            [
+                "e77f5d827b25d0bd",
+                "704e8bc5a17d22ad"
+            ]
+        ]
+    },
+    {
+        "id": "84619c4a4c8c428a",
+        "type": "change",
+        "z": "15b93a2e7e9bc468",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "raw",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 160,
+        "wires": [
+            [
+                "4f48e48669e8a330"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "lodash": {
+        "spec": "lodash",
+        "module": "lodash",
+        "subpath": "",
+        "builtin": false,
+        "known": false
+    },
+    "moment": {
+        "spec": "moment",
+        "module": "moment",
+        "subpath": "",
+        "builtin": false,
+        "known": false
+    }
+}

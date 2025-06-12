@@ -1,0 +1,64 @@
+apiVersion: 1
+datasources:
+  - name: influx-fms-tracker
+    type: influxdb
+    access: proxy
+    orgId: 1
+    uid: aefsg89qxysxse
+    url: http://influxdb2:8086
+    user:
+    database:
+    basicAuth: admin
+    basicAuthUser:
+    withCredentials: true
+    isDefault: true
+    jsonData:
+      dbName: fms-tracker
+      httpHeaderName1: Authorization
+      httpMode: GET
+      keepCookies: []
+    secureJsonData:
+      httpHeaderValue1: "I1pXVm5PV2M0TjNOc2JIRjBZMk0jKllXVnpMV05tWWcqbXlSa0pGd0qKDGEoe4fAxfZzmYbyh127oACF8DTyN/SOKx2IskpjIn0N4FipeX0icsCggoFi5SZXbs3EX0MEh4aEOiGEw24X3Y934bX4Hj3CN1mEAcpors4e78V/EsrBB/duzRBZVMdK2kOCDza6loboHNoqVg=="
+      password: "I1pXVm5PV2M0TjNOc2JIRjBZMk0jKllXVnpMV05tWWcqWGhBd0lyOUvSJaUYBBuZ8Eq7M9nBKs42"
+    version: 7
+    editable: true
+  - name: influx2
+    type: influxdb
+    access: proxy
+    orgId: 1
+    uid: cefshku9i84qof
+    url: http://influxdb2:8086
+    user:
+    database:
+    basicAuth:
+    basicAuthUser:
+    withCredentials: false
+    isDefault: false
+    jsonData:
+      httpMode: POST
+      organization: d86acb81503d3b7b
+      version: Flux
+    secureJsonData:
+      token: "I1pXVm5PV2M0TjNOc2JIRjBZMk0jKllXVnpMV05tWWcqWlNzMGs4WUHgKyTTUfHBQ+puZ8qD1xW8WDCyqqp6y6eFY0nZKre/cRFMzRFhp3Ca2Em9BDBVRrdsztFeBP/nelcU/7wnUemaWacKc1rtSMtLj1sg43k7Gu9hjgKkWoftPJh7PfepPAxccuR7SIJ9Nw=="
+    version: 6
+    editable: true
+  - name: prometheus
+    type: prometheus
+    access: proxy
+    orgId: 1
+    uid: cefshku9i84qof
+    url: http://influxdb2:8086
+    user:
+    database:
+    basicAuth:
+    basicAuthUser:
+    withCredentials: false
+    isDefault: false
+    jsonData:
+      httpMode: POST
+      organization: d86acb81503d3b7b
+      version: Flux
+    secureJsonData:
+      token: "I1pXVm5PV2M0TjNOc2JIRjBZMk0jKllXVnpMV05tWWcqWlNzMGs4WUHgKyTTUfHBQ+puZ8qD1xW8WDCyqqp6y6eFY0nZKre/cRFMzRFhp3Ca2Em9BDBVRrdsztFeBP/nelcU/7wnUemaWacKc1rtSMtLj1sg43k7Gu9hjgKkWoftPJh7PfepPAxccuR7SIJ9Nw=="
+    version: 6
+    editable: true

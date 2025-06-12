@@ -1,0 +1,106 @@
+# compose.yaml
+services:
+  grafana:
+    restart: always
+    user: ${UID}:${GID}
+    image: grafana/grafana:latest
+    ports:
+      - 4210:3000
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./data/grafana/grafana.db:/var/lib/grafana/grafana.db
+      - ./data/grafana-provisioning/:/etc/grafana/provisioning
+      - ./data/grafana/public/img/icons/fms:/usr/share/grafana/public/img/icons/fms
+    depends_on:
+      - influxdb2
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=Samudera2024
+      - GF_SECURITY_ALLOW_EMBEDDING=true
+
+  influxdb2:
+    restart: always
+    user: ${UID}:${GID}
+    image: influxdb:2
+    ports:
+      - 4220:8086
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: Samudera2024
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN_FILE: TripleSix0==
+      DOCKER_INFLUXDB_INIT_ORG: docs
+      DOCKER_INFLUXDB_INIT_BUCKET: home
+    volumes:
+      # - ./data/influxdb:/var/lib/influxdb2
+      #- ./config/influxdb:/etc/influxdb2
+      #- influxdb_data:/var/lib/influxdb2
+      - type: volume
+        source: influxdb_data
+        target: /var/lib/influxdb2
+      - type: volume
+        source: influxdb_config
+        target: /etc/influxdb2
+
+  node-red:
+    restart: always
+    user: ${UID}:${GID}
+    image: nodered/node-red:latest
+    ports:
+      - 4230:1880
+      - 4231:1881
+    volumes:
+      - node_red_data:/data
+      # - ./data/node-red:/data
+      # - ./data/node-red/.config.modules.json:/data/.config.modules.json
+      # - ./data/node-red/.config.nodes.json:/data/.config.nodes.json
+      # - ./data/node-red/.config.runtime.json:/data/.config.runtime.json
+      # - ./data/node-red/.config.users.json:/data/.config.users.json
+      - ./data/node-red/:/usr/src/node-red/data/
+      - ./config/node-red/backup.sh:/usr/src/node-red/backup.sh
+      - ./config/node-red/.backupignore:/usr/src/node-red/.backupignore
+      - ./config/node-red/migration.sh:/usr/src/node-red/migration.sh
+      - ./config/node-red/settings.js:/usr/src/node-red/settings.js
+      - ./config/node-red/settings.js:/data/settings.js
+      - ./config/node-red/logoSMA.svg:/data/logoSMA.svg
+    command: > 
+      bash -c "
+        chmod +x /usr/src/node-red/migration.sh /usr/src/node-red/backup.sh
+      "
+    depends_on:
+      - influxdb2
+      
+  prometheus:
+    restart: always
+    user: ${UID}:${GID}
+    image: prom/prometheus
+    ports:
+      - 4240:9090
+    # commands:
+    #   - '--web.enable-lifecycle'
+    volumes:
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+  mosquitto:
+    restart: always
+    user: ${UID}:${GID}
+    image: eclipse-mosquitto
+    ports:
+      - 4250:1883
+      - 4251:9001
+    volumes:
+      - ./config/mosquitto:/mosquitto/config
+      - mosquito_data:/mosquitto/data
+      # - ./data/mosquitto:/mosquitto/data
+      # - ./log:/mosquitto/log
+
+volumes:
+  grafana_data:
+  influxdb_data:
+  influxdb_config:
+  prometheus_data:
+  node_red_data:
+  mosquito_data:

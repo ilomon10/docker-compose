@@ -1,0 +1,8 @@
+.npm
+node_modules
+logoSMA.svg
+.sessions.json
+.config.runtime.*
+.config.users.*
+*.backup
+package-lock.json
